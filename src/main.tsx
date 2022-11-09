@@ -1,10 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { RouterProvider } from "react-router-dom";
+import router from "./routes/index";
 import './index.css'
-import Home from './pages/Home'
+
+function App() {
+  return <RouterProvider router={router} />;
+}
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <Home />
+    <App />
   </React.StrictMode>
 )
